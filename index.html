@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Versiebeheer LO2E - Toets</title>
+        <link rel="stylesheet" href="style/index.css">
+    </head>
+    <body>
+
+        <header id="header">
+            <h1 id="page-title">VCS LO2E - Toets</h1>
+            <p id="student-nummer">6029052</p>
+            <p id="version">Versie: 1.0</p>
+        </header>
+
+        <main>
+            <article id="introductie">
+                <header>
+                    <div class="title">
+                        <h2>Introductie</h2>
+                    </div>
+                    <div class="meta">
+                        <img src="images/standby.png">
+                    </div>
+                </header>
+                <section>
+                    <h3>Doelstelling</h3>
+                    <ul>
+                        <li>
+                            Behendig zijn in:
+                            <em>commits</em>,
+                            <em>branching</em>,
+                            <em>pushing</em>,
+                            <em>pulling</em>,
+                            <em>merging</em>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Startinstructies</h3>
+                    <ul>
+                        <li>Maak een nieuwe repository aan in github desktop.</li>
+                        <li>Publish de <strong class="badge branch">main</strong> branch en zorg dat de branch <strong>NIET PRIVATE</strong> is</li>
+                        <li>Open je favoriete git applicatie en editor.</li>
+                        <li><strong class="important">Volg de instructies!!!!!</strong></li>
+                    </ul>
+                </section>
+            </article>
+
+            <article id="student-nummer">
+                <header>
+                    <div class="title">
+                        <h2>1. Student nummer aanpassen</h2>
+                    </div>
+                    <div class="meta">
+                        <img src="images/placeholder.jpg">
+                    </div>
+                </header>
+
+                <section>
+                    <h3>Opdracht</h3>
+                    <p>
+                        Voor je begint met het aanpassen van de code,
+                        zorg dat je in de <strong class="badge branch">main</strong> branch zit.
+                    </p>
+
+                    <ul>
+                        <li>Vervang bovenaan de pagina &quot;Student nummer van student&quot; door jouw eigen student nummer (id=student-nummer)</li>
+                        <li>Commit deze wijziging</li>
+                    </ul>
+                </section>
+
+            </article>
+
+            <article id="afbeeldingen">
+                <header>
+                    <div class="title">
+                        <h2>2. Afbeeldingen toevoegen</h2>
+                    </div>
+                    <div class="meta">
+                        <img src="images/pictures.png">
+                    </div>
+                </header>
+
+                <section>
+                    <h3>Opdracht</h3>
+                    <p>
+                        Voor je begint met het aanpassen van de code,
+                        zorg dat je in de <strong class="badge branch">main</strong> branch zit.
+                    </p>
+                    <ul>
+                        <li>Maak een nieuwe branch: <strong class="badge branch">afbeeldingen</strong></li>
+                        <li>Controleer dat je in deze branch zit</li>
+                        <li>
+                            Zoek een passende afbeelding voor dit hoofdstuk (id=afbeeldingen),
+                            voeg deze afbeelding toe in de map <em>images</em>.
+                        </li>
+                        <li>
+                            Pas de src aan van de afbeelding van dit hoofdstuk aan,
+                            zodat de nieuw toegevoegde afbeelding zichtbaar is.
+                        </li>
+                        <li><em class="badge commit">Commit</em> deze wijziging</li>
+                        <li>Ga terug naar de <strong class="badge branch">main</strong> branch.</li>
+                        <li>
+                            <em class="badge merge">Merge</em> de aanpassingen van 
+                            <strong class="badge branch">afbeeldingen</strong> naar
+                            <strong class="badge branch">main</strong>.
+                        <li>Push de <strong class="badge branch">main</strong> branch naar github</li>
+                    </ul>
+                </section>
+            </article>
+
+            <article id="conflict1">
+                <header>
+                    <div class="title">
+                        <h2>3. Een conflict oplossen</h2>
+                        <p>
+                            Winnaar:
+                            <span id="winnaar">Niemand</span>
+                        </p>
+                    </div>
+                    <div class="meta">
+                        <img src="images/kapow.png">
+                    </div>
+                </header>
+
+                <section>
+                    <h3>Deadpool</h3>
+                    <ul>
+                        <li>Zorg dat je in de <strong class="badge branch">main</strong> branch zit</li>
+                        <li>Begin een nieuwe branch: <strong class="badge branch">Deadpool</strong></li>
+                        <li>Pas de hierboven aangegeven winnaar (id=winnaar) aan naar: <em>Deadpool</em></li>
+                        <li>Commit deze wijziging.</li>
+                    </ul>
+
+                    <h3>Punisher</h3>
+                    <ul>
+                        <li>Ga terug naar de <strong class="badge branch">main</strong> branch</li>
+                        <li>Begin een nieuwe branch: <strong class="badge branch">punisher</strong></li>
+                        <li>Pas de hierboven aangegeven winnaar (id=winnaar) aan naar: <em>Punisher</em></li>
+                        <li>Commit deze wijziging.</li>
+                    </ul>
+
+                    <h3>Conflict!</h3>
+                    <ul>
+                        <li>Ga terug naar de <strong class="badge branch">main</strong> branch</li>
+                        <li>Refresh de pagina en check of Niemand de winnaar is</li>
+                        <li>
+                            <em class="badge merge">Merge</em> de aanpassingen van 
+                            <strong class="badge branch">punisher</strong> naar
+                            <strong class="badge branch">main</strong>.
+                        </li>
+                        <li>Controleer of punisher de winnaar is (refresh de pagina).</li>
+                        <li>
+                            <em class="badge merge">Merge</em> de aanpassingen van 
+                            <strong class="badge branch">deadpool</strong> naar
+                            <strong class="badge branch">main</strong>.
+                        </li>
+                        <li>
+                            <strong>Conflict!</strong>
+                            <p>Je hebt nu onderstaand conflict in de header van dit article.</p>
+                            <pre><code>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&lt;span id="winnaar"&gt;Punisher&lt;/span&gt;
+=======
+&lt;span id="winnaar"&gt;Deadpool&lt;/span&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; Deadpool
+                                </code>
+                            </pre>
+                        </li>
+                        <li>Zorg dat <em>Deadpool</em> de winnaar is.</li>
+                        <li>Commit de merge</li>
+                        <li>Push de <strong class="badge branch">main</strong> branch naar github</li>
+                    </ul>
+                </section>
+            </article>
+
+            <article id="conflict2">
+                <header>
+                    <div class="title">
+                        <h2>4. Een conflict oplossen</h2>
+                        <p>Soms is er bij een conflict geen keuze, maar moet je handmatig de wijzigingen samen voegen.</p>
+                        <p>
+                            Schadevergoeding:
+                            <span id="schadevergoeding">&euro; 0,00</span>
+                        </p>
+                    </div>
+                    <div class="meta">
+                        <img src="images/kapow.png">
+                    </div>
+                </header>
+
+                <section>
+                    <h3>Avengers</h3>
+                    <ul>
+                        <li>Zorg dat je in de <strong class="badge branch">main</strong> branch zit</li>
+                        <li>Begin een nieuwe branch: <strong class="badge branch">Avengers</strong></li>
+                        <li>Pas het hierboven aangegeven schadevergoedingbedrag (id=schadevergoeding) aan naar: <em>2.000.000,00</em></li>
+                        <li>Commit deze wijziging.</li>
+                    </ul>
+
+                    <h3>Savage Avengers</h3>
+                    <ul>
+                        <li>Ga terug naar de <strong class="badge branch">main</strong> branch</li>
+                        <li>Begin een nieuwe branch: <strong class="badge branch">Savage Avengers</strong></li>
+                        <li>Pas het hierboven aangegeven schadevergoedingbedrag (id=schadevergoeding) aan naar: <em>2.345.999.999,00</em></li>
+                        <li>Commit deze wijziging.</li>
+                    </ul>
+
+                    <h3>Conflict!</h3>
+                    <ul>
+                        <li>Ga terug naar de <strong class="badge branch">main</strong> branch</li>
+                        <li>
+                            <em class="badge merge">Merge</em> de aanpassingen van 
+                            <strong class="badge branch">Savage Avengers</strong> naar
+                            <strong class="badge branch">main</strong>.
+                        </li>
+                        <li>Controleer of de schadevergoeding 2.345.999.999,00 is (refresh de pagina).</li>
+                        <li>
+                            <em class="badge merge">Merge</em> de aanpassingen van 
+                            <strong class="badge branch">Avengers</strong> naar
+                            <strong class="badge branch">main</strong>.
+                        </li>
+                        <li>
+                            <strong>Conflict!</strong>
+                            <p>Je hebt nu onderstaand conflict in de header van dit article.</p>
+                            <pre><code>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&lt;span id="donaties"&gt;&euro; 2.345.999.999,00&lt;/span&gt;
+=======
+&lt;span id="donaties"&gt;&euro; 2.000.000,00&lt;/span&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; Avengers
+                                </code>
+                            </pre>
+                        </li>
+                        <li>Zorg dat de schadevergoedingen bij elkaar worden opgeteld.</li>
+                        <li>Controleer of het schadevergoedingbedrag correct is (refresh de pagina).</li>
+                        <li>Commit de merge</li>
+                        <li>Push de <strong class="badge branch">main</strong> branch naar github</li>
+                    </ul>
+                </section>
+            </article>
+
+            
+
+            <article id="release">
+                <header>
+                    <div class="title">
+                        <h2>5. Versie update</h2>
+                        <p>Versiebeheer eindigt natuurlijk altijd met een nieuwe versie.</p>
+                    </div>
+                    <div class="meta">
+                        <img src="images/release.png">
+                    </div>
+                </header>
+
+                <section>
+                    <h3>Opdracht</h3>
+                    <p>
+                        Voor je begint met het aanpassen van de code,
+                        zorg dat je in de <strong class="badge branch">main</strong> branch zit.
+                    </p>
+                    <ul>
+                        <li>Verhoog de versie (id=version) met 0.1</li>
+                        <li>Commit en push de wijziging</li>
+                        <li>Lever de URL van jouw github repository in.</li>
+                    </ul>
+                </section>  
+
+            </article>
+        </main>
+
+        <footer>
+
+        </footer>
+
+    </body>
+</html>
